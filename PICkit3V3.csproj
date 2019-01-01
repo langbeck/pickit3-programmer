@@ -84,6 +84,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="HidSharp">
+      <HintPath>packages\HidSharp.2.0.5\lib\net35\HidSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PK3Helpers.cs" />
@@ -314,6 +317,7 @@
     <Compile Include="DialogVDDErase.Designer.cs">
       <DependentUpon>DialogVDDErase.cs</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon1.ico" />
