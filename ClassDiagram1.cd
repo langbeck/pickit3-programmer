@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="PICkit2V2.DialogTroubleshoot">
+    <Position X="0.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <FileName>DialogTroubleshoot.cs</FileName>
+      <HashCode>SCohAhgkRCUAABCASGTGTFIiEFFRIAQIIAABOIBUwAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>
