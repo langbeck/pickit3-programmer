@@ -747,7 +747,7 @@ namespace PICkit2V2
         {
             try
             {
-                System.Diagnostics.Process.Start(FormPICkit2.HomeDirectory + KONST.UserGuideFileNamePK2);
+                System.Diagnostics.Process.Start(Path.Combine(FormPICkit2.HomeDirectory, KONST.UserGuideFileNamePK2));
             }
             catch
             {

@@ -10,8 +10,8 @@ namespace PICkit2V2
 		public const string AppVersion = "3.10.00";
 		public const byte DevFileCompatLevel = 6;
 		public const byte DevFileCompatLevelMin = 0;
-		public const string UserGuideFileNamePK2 = "\\PICkit2 User Guide 51553E.pdf";
-		public const string UserGuideFileNamePK3 = "\\PICkit 3 Programmer Application User's Guide 50002158a.pdf";
+		public const string UserGuideFileNamePK2 = "PICkit2 User Guide 51553E.pdf";
+		public const string UserGuideFileNamePK3 = "PICkit 3 Programmer Application User's Guide 50002158a.pdf";
 
 		// min firmware version Pk2
 		public const byte FWVerMajorReq = 2;

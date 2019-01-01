@@ -9,6 +9,7 @@ using System.Threading;
 using System.Windows.Forms;
 using Pk2 = PICkit2V2.PICkitFunctions;
 using KONST = PICkit2V2.Constants;
+using System.IO;
 
 namespace PICkit2V2
 {
@@ -1464,7 +1465,7 @@ namespace PICkit2V2
         {
             try
             {
-                System.Diagnostics.Process.Start(FormPICkit2.HomeDirectory + "\\Logic Tool User Guide.pdf");
+                System.Diagnostics.Process.Start(Path.Combine(FormPICkit2.HomeDirectory, "Logic Tool User Guide.pdf"));
             }
             catch
             {

@@ -5629,7 +5629,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(HomeDirectory + KONST.UserGuideFileNamePK2);
+				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, KONST.UserGuideFileNamePK2));
 			}
 			catch
 			{
@@ -5641,7 +5641,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(HomeDirectory + "\\PICkit 2 Readme.txt");
+				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "PICkit 2 Readme.txt"));
 			}
 			catch
 			{
@@ -5653,7 +5653,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(HomeDirectory + "\\PICkit 3 Programmer Application ReadMe.txt");
+				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "PICkit 3 Programmer Application ReadMe.txt"));
 			}
 			catch
 			{
@@ -5951,14 +5951,13 @@ namespace PICkit2V2
 		{
 			//StreamWriter hexFile = new StreamWriter("PICkit2.ini");
 			StreamWriter hexFile;
-
 			if (!Pk2.isPK3)
-				hexFile = File.CreateText(HomeDirectory + "\\PICkit2.ini");
+				hexFile = File.CreateText(Path.Combine(HomeDirectory, "PICkit2.ini"));
 			else
-				hexFile = File.CreateText(HomeDirectory + "\\PICkit3.ini");
+				hexFile = File.CreateText(Path.Combine(HomeDirectory, "PICkit3.ini"));
 
-			// Comments
-			string value = ";" + Pk2.ToolName + " version " + Constants.AppVersion + " INI file.";
+            // Comments
+            string value = ";" + Pk2.ToolName + " version " + Constants.AppVersion + " INI file.";
 			hexFile.WriteLine(value);
 			DateTime now = new DateTime();
 			now = System.DateTime.Now;
@@ -6379,9 +6378,9 @@ namespace PICkit2V2
 
 				HomeDirectory = hexFile.DirectoryName;
 				// init default sounds locations
-				SuccessWavFile = HomeDirectory + SuccessWavFile;
-				WarningWavFile = HomeDirectory + WarningWavFile;
-				ErrorWavFile = HomeDirectory + ErrorWavFile;
+				SuccessWavFile = Path.Combine(HomeDirectory, SuccessWavFile);
+				WarningWavFile = Path.Combine(HomeDirectory, WarningWavFile);
+				ErrorWavFile = Path.Combine(HomeDirectory, ErrorWavFile);
 				TextReader hexRead = hexFile.OpenText();
 				string fileLine = hexRead.ReadLine();
 				while (fileLine != null)
@@ -8105,7 +8104,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(HomeDirectory + "\\Programmer-To-Go User Guide.pdf");
+				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "Programmer-To-Go User Guide.pdf"));
 			}
 			catch
 			{
@@ -8190,7 +8189,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(HomeDirectory + "\\Logic Tool User Guide.pdf");
+				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "Logic Tool User Guide.pdf"));
 			}
 			catch
 			{
@@ -8614,7 +8613,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(HomeDirectory + KONST.UserGuideFileNamePK3);
+				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, KONST.UserGuideFileNamePK3));
 			}
 			catch
 			{
@@ -8638,7 +8637,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(HomeDirectory + "\\44-Pin Demo Board User Guide 41296B.pdf");
+				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "44-Pin Demo Board User Guide 41296B.pdf"));
 			}
 			catch
 			{
@@ -8650,7 +8649,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(HomeDirectory + "\\Low Pin Count User Guide 51556a.pdf");
+				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "Low Pin Count User Guide 51556a.pdf"));
 			}
 			catch
 			{
