@@ -1,0 +1,6 @@
+# Build folders
+bin/*
+obj/*
+
+# User project settings
+*.csproj.user

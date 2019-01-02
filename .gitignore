@@ -1,4 +1,8 @@
+# NuGet packages
 packages/*
-bin/*
-obj/*
+
+# VS binary solution file
+*.suo
+
+# MonoDevelop folder
 .vs/*
