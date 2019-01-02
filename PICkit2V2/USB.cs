@@ -19,7 +19,8 @@ namespace PICkit2V2
             return handler;
         }
 
-        private static DeviceStream GetDeviceStream(IntPtr handler){
+        private static DeviceStream GetDeviceStream(IntPtr handler)
+        {
             return hDict[handler];
         }
 

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PICkit3V3", "PICkit2V2\PICkit3V3.csproj", "{FD0E24D8-5714-4755-8E1A-C2C739824579}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0E24D8-5714-4755-8E1A-C2C739824579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0E24D8-5714-4755-8E1A-C2C739824579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0E24D8-5714-4755-8E1A-C2C739824579}.Debug|x86.ActiveCfg = Debug|x86
+		{FD0E24D8-5714-4755-8E1A-C2C739824579}.Debug|x86.Build.0 = Debug|x86
+		{FD0E24D8-5714-4755-8E1A-C2C739824579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0E24D8-5714-4755-8E1A-C2C739824579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD0E24D8-5714-4755-8E1A-C2C739824579}.Release|x86.ActiveCfg = Release|x86
+		{FD0E24D8-5714-4755-8E1A-C2C739824579}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal
