@@ -1,0 +1,53 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=16F887Demo.err
+Folder=Intermediary
+DeviceName=PIC16F887
+LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\Program Files\Microchip\MPASM Suite\MPASMWIN.EXE
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|16F887Demo.asm||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+[File001]
+Location=C:\Program Files\Microchip\PICkit 2 v2\DBE Demo\16F887Demo.cod
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\Program Files\Microchip\MPASM Suite\MPASMWIN.EXE
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|16F887Demo.asm||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+[File002]
+Location=C:\Program Files\Microchip\PICkit 2 v2\DBE Demo\16F887Demo.hex
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\Program Files\Microchip\MPASM Suite\MPASMWIN.EXE
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|16F887Demo.asm||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+[File003]
+Location=16F887Demo.lst
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
+LanguageToolID={49D3CA3F-D9A3-4518-9943-226A347E8CC7}
+LanguageToolLocation=C:\Program Files\Microchip\MPASM Suite\MPASMWIN.EXE
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|16F887Demo.asm||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+[TOOL_LOC_STAMPS]
+tool_loc{49D3CA3F-D9A3-4518-9943-226A347E8CC7}=C:\Program Files\Microchip\MPASM Suite\MPASMWIN.EXE

@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+cd $(dirname $(realpath $0))/..
+exec bin/PICkit3.exe
