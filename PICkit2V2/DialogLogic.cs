@@ -442,7 +442,7 @@ namespace PICkit2V2
             else if (zoom == 3)
                 length = 4096;
 
-            Bitmap gridmap = new Bitmap(length, width, PixelFormat.Format16bppRgb555);
+            Bitmap gridmap = new Bitmap(length, width);
             Graphics graphics = Graphics.FromImage(gridmap);
             SolidBrush brush = new SolidBrush(Color.Black);
             graphics.FillRectangle(brush, 0, 0, length, width);
