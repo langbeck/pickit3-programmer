@@ -83,7 +83,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="HidSharp">
-      <HintPath>..\packages\HidSharp.2.0.5\lib\net35\HidSharp.dll</HintPath>
+      <HintPath>..\packages\HidSharp.2.1.0\lib\net35\HidSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
