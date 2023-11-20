@@ -773,7 +773,7 @@ namespace PICkit2V2
 			// 
 			this.usersGuidePk3ToolStripMenuItem.Name = "usersGuidePk3ToolStripMenuItem";
 			this.usersGuidePk3ToolStripMenuItem.Size = new System.Drawing.Size(316, 22);
-			this.usersGuidePk3ToolStripMenuItem.Text = "PICkit 3 Programmer Application &User’s Guide";
+			this.usersGuidePk3ToolStripMenuItem.Text = "PICkit 3 Programmer Application &User\'s Guide";
 			this.usersGuidePk3ToolStripMenuItem.Click += new System.EventHandler(this.launchUsersGuidePK3);
 			// 
 			// toolStripMenuItemProgToGo

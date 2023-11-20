@@ -439,6 +439,7 @@ namespace PICkit2V2
 		public static float ScalefactW = 1F;   // scaling factors for dealing with non-standard DPI
 		public static float ScalefactH = 1F;
 		public static string HomeDirectory;
+		public static string DocDirectory;
 		public static string UserConfigDirectory;
 		public static byte slowSpeedICSP = 4; // default value
 		public static bool PlaySuccessWav = false;
@@ -5631,7 +5632,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, KONST.UserGuideFileNamePK2));
+				System.Diagnostics.Process.Start(Path.Combine(DocDirectory, KONST.UserGuideFileNamePK2));
 			}
 			catch
 			{
@@ -5643,7 +5644,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "PICkit 2 Readme.txt"));
+				System.Diagnostics.Process.Start(Path.Combine(DocDirectory, "PICkit 2 Readme.txt"));
 			}
 			catch
 			{
@@ -5655,7 +5656,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "PICkit 3 Programmer Application ReadMe.txt"));
+				System.Diagnostics.Process.Start(Path.Combine(DocDirectory, "PICkit 3 Programmer Application ReadMe.txt"));
 			}
 			catch
 			{
@@ -6388,6 +6389,8 @@ namespace PICkit2V2
 				hexFile = new FileInfo(iniFile);
 				HomeDirectory = hexFile.DirectoryName;
 				hexFile = null;
+
+				DocDirectory = Path.Combine(HomeDirectory, "docs");
 
 				UserConfigDirectory = Path.Combine(
 					Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
@@ -8126,7 +8129,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "Programmer-To-Go User Guide.pdf"));
+				System.Diagnostics.Process.Start(Path.Combine(DocDirectory, "Programmer-To-Go User Guide.pdf"));
 			}
 			catch
 			{
@@ -8211,7 +8214,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "Logic Tool User Guide.pdf"));
+				System.Diagnostics.Process.Start(Path.Combine(DocDirectory, "Logic Tool User Guide.pdf"));
 			}
 			catch
 			{
@@ -8635,7 +8638,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, KONST.UserGuideFileNamePK3));
+				System.Diagnostics.Process.Start(Path.Combine(DocDirectory, KONST.UserGuideFileNamePK3));
 			}
 			catch
 			{
@@ -8659,7 +8662,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "44-Pin Demo Board User Guide 41296B.pdf"));
+				System.Diagnostics.Process.Start(Path.Combine(DocDirectory, "44-Pin Demo Board User Guide 41296B.pdf"));
 			}
 			catch
 			{
@@ -8671,7 +8674,7 @@ namespace PICkit2V2
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(Path.Combine(HomeDirectory, "Low Pin Count User Guide 51556a.pdf"));
+				System.Diagnostics.Process.Start(Path.Combine(DocDirectory, "Low Pin Count User Guide 51556a.pdf"));
 			}
 			catch
 			{
