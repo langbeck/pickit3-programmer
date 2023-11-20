@@ -2,13 +2,19 @@ APP_NAME=PICkit3
 PROJECT_DIR=PICkit2V2
 BUILD_CONFIG=Release
 INSTALL_DIR=/opt/microchip/pickit3
+USE_MSBUILD := $(shell command -v msbuild 2> /dev/null)
 
 BUILD_DIR=$(PROJECT_DIR)/bin/$(BUILD_CONFIG)
 
 
 build:
 	nuget restore -NonInteractive
+
+ifdef USE_MSBUILD
 	msbuild -t:Build -p:Configuration="$(BUILD_CONFIG)" -v:quiet
+else
+	xbuild /target:Build /property:Configuration="$(BUILD_CONFIG)" /verbosity:quiet
+endif
 
 install: install-bundle install-bin install-link install-udev-rules
 
