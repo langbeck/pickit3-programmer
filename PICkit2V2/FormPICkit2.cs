@@ -9,6 +9,7 @@ using System.Threading;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices; // DllImport
+using System.Reflection;
 using Pk2 = PICkit2V2.PICkitFunctions;
 using P32 = PICkit2V2.PIC32MXFunctions;
 using PE33 = PICkit2V2.dsPIC33_PE;
@@ -438,6 +439,7 @@ namespace PICkit2V2
 		public static float ScalefactW = 1F;   // scaling factors for dealing with non-standard DPI
 		public static float ScalefactH = 1F;
 		public static string HomeDirectory;
+		public static string UserConfigDirectory;
 		public static byte slowSpeedICSP = 4; // default value
 		public static bool PlaySuccessWav = false;
 		public static string SuccessWavFile = "\\Sounds\\success.wav";
@@ -5950,15 +5952,21 @@ namespace PICkit2V2
 		private void SaveINI()
 		{
 			//StreamWriter hexFile = new StreamWriter("PICkit2.ini");
-			StreamWriter hexFile;
-			if (!Pk2.isPK3)
-				hexFile = File.CreateText(Path.Combine(HomeDirectory, "PICkit2.ini"));
-			else
-				hexFile = File.CreateText(Path.Combine(HomeDirectory, "PICkit3.ini"));
 
-            // Comments
-            string value = ";" + Pk2.ToolName + " version " + Constants.AppVersion + " INI file.";
+			string iniFile;
+			StreamWriter hexFile;
+
+			if (!Pk2.isPK3)
+				iniFile = "PICkit2.ini";
+			else
+				iniFile = "PICkit3.ini";
+
+			hexFile = File.CreateText(Path.Combine(UserConfigDirectory, iniFile));
+
+			// Comments
+			string value = ";" + Pk2.ToolName + " version " + Constants.AppVersion + " INI file.";
 			hexFile.WriteLine(value);
+
 			DateTime now = new DateTime();
 			now = System.DateTime.Now;
 			value = ";" + now.Date.ToShortDateString() + " " + now.ToShortTimeString();
@@ -6369,14 +6377,28 @@ namespace PICkit2V2
 				int desktopHeigth = SystemInformation.VirtualScreen.Height;
 				int desktopWidth = SystemInformation.VirtualScreen.Width;
 
+				string iniFile;
 				FileInfo hexFile;
 
 				if (!Pk2.isPK3)
-					hexFile = new FileInfo("PICkit2.ini");
+				 iniFile = "PICkit2.ini";
 				else
-					hexFile = new FileInfo("PICkit3.ini");
+				 iniFile = "PICkit3.ini";
 
+				hexFile = new FileInfo(iniFile);
 				HomeDirectory = hexFile.DirectoryName;
+				hexFile = null;
+
+				UserConfigDirectory = Path.Combine(
+					Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+					this.GetType().Assembly.GetName().Name);
+
+				if (!Directory.Exists(UserConfigDirectory)) {
+					Directory.CreateDirectory(UserConfigDirectory);
+				}
+
+				hexFile = new FileInfo(Path.Combine(UserConfigDirectory, iniFile));
+
 				// init default sounds locations
 				SuccessWavFile = Path.Combine(HomeDirectory, SuccessWavFile);
 				WarningWavFile = Path.Combine(HomeDirectory, WarningWavFile);
